@@ -1,0 +1,20 @@
+  handleClick = () => {
+        let url = window.URL.createObjectURL(this.$file.files[0]);
+        this.$img.src = url;
+        this.$img.style.display = 'block';
+        this.setState({url});
+    };
+
+
+
+
+
+
+
+<div className="works-body-input">
+                            <img ref={img => this.$img = img}
+                                 src="" alt=""
+                                 id="works-img"/>
+                            <i> </i>
+                            <input onChange={this.handleClick} type="file" ref={input => this.$file = input}/>
+                        </div>
