@@ -10,7 +10,7 @@ export default class HomeLesson extends Component{
                     this.props.lessons.map((item,index)=>(
                         <Link key={index} to={{pathname:`detail/${item.id}`,state:item}}>
                             <div className='lesson'>
-                                <img src={item.photo} alt=""/>
+                                <img src={item.photo}/>
                                 <p>{item.age}</p>
                             </div>
                         </Link>

@@ -21,7 +21,7 @@ class Home extends Component{
                 <HomeLesson lessons={this.props.lessons.list}
                             fetchLessons={this.props.fetchLessons}
                             hasMore={this.props.lessons.hasMore}
-                            loading={this.props.lessons.loading}
+                            // loading={this.props.lessons.loading}
                 />
             </div>
         )

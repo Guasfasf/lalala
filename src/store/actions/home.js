@@ -44,10 +44,10 @@ let actions = {
                     loading,offset,limit,hasMore
                 }
             } = getState().home;
-            // if(!loading){
-            //     dispatch({type:types.REFRESH_LESSONS});
-            //     dispatch({type:types.REFRESH_LESSONS_SUCCESS,payload:getLessons(type,0,offset)})//(0,limit)刷新到第一页
-            // }
+            if(!loading){
+                dispatch({type:types.REFRESH_LESSONS});
+                dispatch({type:types.REFRESH_LESSONS_SUCCESS,payload:getLessons(type,0,offset)})//(0,limit)刷新到第一页
+            }
         }
     },
     changeType(type){//右上角的课程分类

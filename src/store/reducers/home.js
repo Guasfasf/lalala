@@ -64,6 +64,31 @@ export default function (state=initState,action) {
                 type:action.payload
             };
             break;
+        case types.REFRESH_LESSONS:
+            return {
+                ...state,
+                lessons:{
+                    ...state.lessons,
+                    loading:true,
+                    list:[]
+                }
+            };
+            break;
+        case types.REFRESH_LESSONS_SUCCESS:
+            return {
+                ...state,
+                lessons:{
+                    ...state.lessons,
+                    loading:false,
+                    list:[...action.payload.list],
+                    offset:action.payload.list.length,
+                    hasMore:action.payload.hasMore
+                }
+            };
+            break;
+
+
+
         default:
             return state;
     }
